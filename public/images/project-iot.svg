@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<rect width="800" height="500" fill="#dce7e9"/><path d="M0 350C120 290 200 410 330 330S560 260 800 340V500H0z" fill="#9bb9c2"/>
+<path d="M100 110h600v240H100z" fill="#f8f4e7" stroke="#222" stroke-width="5"/>
+<circle cx="170" cy="170" r="15" fill="#222"/><circle cx="215" cy="170" r="15" fill="#222"/>
+<path d="M150 285l120-90 110 55 115-90 140 95" fill="none" stroke="#b7835e" stroke-width="8"/>
+<text x="145" y="325" font-family="monospace" font-size="25" font-weight="700">IoT FLOOD MONITOR</text>
+</svg>

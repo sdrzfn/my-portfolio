@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<rect width="800" height="500" fill="#f7f3e7"/><path d="M0 100h800M0 200h800M0 300h800M0 400h800M100 0v500M200 0v500M300 0v500M400 0v500M500 0v500M600 0v500M700 0v500" stroke="#b8c6d3" opacity=".55"/>
+<rect x="120" y="90" width="560" height="320" fill="#fff" stroke="#222" stroke-width="4"/>
+<text x="160" y="160" font-family="monospace" font-size="26" font-weight="700">SADRAKH Z.P.</text>
+<text x="160" y="205" font-family="monospace" font-size="17">scrapbook portfolio</text>
+<rect x="160" y="245" width="200" height="14" fill="#f1d74b"/>
+<rect x="160" y="285" width="390" height="12" fill="#bbb"/>
+<rect x="160" y="320" width="330" height="12" fill="#bbb"/>
+</svg>
