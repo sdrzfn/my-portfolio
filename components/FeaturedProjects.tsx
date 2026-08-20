@@ -17,7 +17,7 @@ export default function FeaturedProjects() {
       <div className="container">
         <div className="section-heading">
           <h2 className="section-title">Featured Projects</h2>
-          <a className="section-link" href="#contact">view all projects →</a>
+          <a className="section-link" href="">view all projects →</a>
         </div>
 
         <div className="projects-shell">

@@ -40,7 +40,7 @@ export default function Experience() {
               <a className="social" href="https://github.com/" target="_blank" rel="noreferrer">GH</a>
               <a className="social" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">in</a>
               <a className="social" href="mailto:sadrakhzp.dev@gmail.com">✉</a>
-              <a className="social" href="#contact">↗</a>
+              <a className="social" href="">↗</a>
             </div>
           </div>
         </div>
