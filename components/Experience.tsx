@@ -12,14 +12,14 @@ export default function Experience() {
       <div className="container">
         <div className="experience-grid">
           <div>
-            <h2 className="tools-title">Tools & Software</h2>
+            <h2 className="tools-title">TOOLS & SOFTWARE</h2>
             <div className="tools-grid">
               {tools.map((tool) => <div className="tool" key={tool}>{tool}</div>)}
             </div>
           </div>
 
           <div>
-            <h2 className="experience-title">Education & Experience</h2>
+            <h2 className="experience-title">LATEST EDUCATION</h2>
             <div className="timeline">
               {timeline.map(([year, title, detail]) => (
                 <div className="timeline-item" key={year + title}>
@@ -34,7 +34,7 @@ export default function Experience() {
           </div>
 
           <div className="contact-panel">
-            <h2 className="contact-title">Get in Touch</h2>
+            <h2 className="contact-title">GET IN TOUCH</h2>
             <p>Let&apos;s work together.<br />Below is my socials, just hit me up! :)</p>
             <div className="socials">
               <a className="social" href="https://github.com/" target="_blank" rel="noreferrer">GH</a>

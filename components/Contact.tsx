@@ -15,8 +15,8 @@ export default function Contact() {
       <div className="container">
         <div className="contact-paper">
           <div>
-            <span className="pill-label">LET&apos;S MAKE SOMETHING</span>
-            <h2>Have an idea?<br /><span className="yellow-mark">Let&apos;s make it real.</span></h2>
+            <span className="pill-label-short">LET&apos;S MAKE SOMETHING</span>
+            <a className="contact-cta">Have an idea?<br /><span className="yellow-mark">Let&apos;s make it real.</span></a>
             <p>
               Open to creative collaborations, frontend work, product ideas and
               opportunities where technology meets a little bit of personality.

@@ -86,7 +86,7 @@ export default function Hero() {
 
           <div className="hero-visual">
             <div className="photo-frame" aria-label="Profile photo placeholder">
-              <img src="/images/profile-placeholder.svg" alt="" />
+              <img src="/images/Sadrakh.JPG" alt="" />
               <div className="tape photo-tape hero-tape" />
               <div className="note photo-caption">
                 be served<br />to serve
