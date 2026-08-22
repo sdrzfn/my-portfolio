@@ -14,10 +14,10 @@ export async function POST(request: Request) {
     }
 
     // ============================================
-    // KONFIGURASI EMAIL - ISI DENGAN EMAIL KAMU
+    // KONFIGURASI EMAIL
     // ============================================
     //
-    // Opsi A: Gmail (butuh App Password)
+    // Opsi A: Gmail
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
