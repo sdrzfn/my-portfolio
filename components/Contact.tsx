@@ -1,13 +1,48 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useEffect } from "react";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSent(true);
+    setLoading(true);
+    setError(null);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      message: formData.get("message") as string,
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setSent(true);
+      form.reset();
+
+      setTimeout(() => {
+        setSent(false);
+      }, 7000);
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -16,7 +51,10 @@ export default function Contact() {
         <div className="contact-paper">
           <div>
             <span className="pill-label-short">LET&apos;S MAKE SOMETHING</span>
-            <a className="contact-cta">Have an idea?<br /><span className="yellow-mark">Let&apos;s make it real.</span></a>
+            <a className="contact-cta">
+              Have an idea?<br />
+              <span className="yellow-mark">Let&apos;s make it real.</span>
+            </a>
             <p>
               Open to creative collaborations, frontend work, product ideas and
               opportunities where technology meets a little bit of personality.
@@ -26,66 +64,27 @@ export default function Contact() {
           <form onSubmit={handleSubmit}>
             <label>
               Name
-              <input required name="name" placeholder="your name" />
+              <input required name="name" placeholder="your name" disabled={loading} />
             </label>
             <label>
               Email
-              <input required type="email" name="email" placeholder="you@example.com" />
+              <input required type="email" name="email" placeholder="you@example.com" disabled={loading} />
             </label>
             <label>
               Message
-              <textarea required name="message" rows={4} placeholder="tell me what you're building..." />
+              <textarea required name="message" rows={4} placeholder="tell me what you're building..." disabled={loading} />
             </label>
-            <button type="submit">{sent ? "Message noted ✓" : "Send a message →"}</button>
+            
+            {error && (
+              <p className="form-error">{error}</p>
+            )}
+            
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : sent ? "Message noted ✓" : "Send a message →"}
+            </button>
           </form>
         </div>
       </div>
-
-      <style jsx>{`
-        .contact-section { padding-top: 35px; }
-        .contact-paper {
-          position: relative;
-          display: grid;
-          grid-template-columns: 1fr .9fr;
-          gap: 70px;
-          padding: 52px;
-          background: var(--blue-paper);
-          box-shadow: 7px 9px 0 rgba(40,31,18,.08);
-          clip-path: polygon(1% 4%, 10% 6%, 18% 3%, 28% 5%, 39% 3%, 51% 6%, 62% 3%, 74% 5%, 87% 3%, 99% 6%, 98% 95%, 88% 93%, 78% 96%, 65% 93%, 54% 97%, 41% 94%, 28% 96%, 15% 93%, 3% 96%);
-        }
-        .contact-paper h2 {
-          margin: 22px 0 16px;
-          font-family: var(--display);
-          font-size: clamp(2rem, 4vw, 3.8rem);
-          line-height: 1.05;
-          letter-spacing: -.05em;
-        }
-        .contact-paper p { max-width: 520px; font-size: .78rem; }
-        form { display: grid; gap: 14px; }
-        label { display: grid; gap: 5px; font-size: .65rem; font-weight: 700; }
-        input, textarea {
-          width: 100%;
-          border: 1px solid rgba(0,0,0,.35);
-          background: rgba(248,244,231,.86);
-          padding: 11px 13px;
-          outline: none;
-          resize: vertical;
-        }
-        input:focus, textarea:focus { box-shadow: 3px 3px 0 var(--yellow); }
-        form button {
-          justify-self: start;
-          border: 1px solid var(--ink);
-          background: var(--ink);
-          color: white;
-          padding: 11px 18px;
-          cursor: pointer;
-          font-family: var(--display);
-          font-size: .68rem;
-        }
-        @media (max-width: 720px) {
-          .contact-paper { grid-template-columns: 1fr; padding: 46px 30px 54px; gap: 30px; }
-        }
-      `}</style>
     </section>
   );
 }

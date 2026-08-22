@@ -21,7 +21,7 @@ export default function FeaturedProjects() {
         </div>
 
         <div className="projects-shell">
-          <button className="carousel-btn prev" onClick={scrollPrev} aria-label="Previous projects">‹</button>
+          <button className="carousel-btn prev" onClick={scrollPrev} aria-label="Previous projects">&lsaquo;</button>
           <div className="projects-track" ref={emblaRef}>
             <div className="projects-container">
               {projects.map((project, index) => (
@@ -40,7 +40,7 @@ export default function FeaturedProjects() {
               ))}
             </div>
           </div>
-          <button className="carousel-btn next" onClick={scrollNext} aria-label="Next projects">›</button>
+          <button className="carousel-btn next" onClick={scrollNext} aria-label="Next projects">&rsaquo;</button>
         </div>
       </div>
     </section>
