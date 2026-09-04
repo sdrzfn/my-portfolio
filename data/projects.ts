@@ -19,16 +19,16 @@ export const projects: Project[] = [
     tags: ["Product", "Next.js", "WebGIS"],
   },
   {
-    title: "Adventure Works BI Website",
-    description: "This Web App is a deployed interactive data analytics application designed to simulate real-world enterprise operations.",
-    image: "/images/project-portfolio.svg",
-    tags: ["Project", "Full-Stack", "Business Intelligence"],
-  },
-  {
     title: "Information System Lab Website",
     description: "A Website that function as gateway to information system college student at UPN Veteran Jawa Timur.",
     image: "/images/project-is-lab.png",
     tags: ["Project", "Laravel", "Website"],
+  },
+  {
+    title: "Adventure Works BI Website",
+    description: "This Web App is a deployed interactive data analytics application designed to simulate real-world enterprise operations.",
+    image: "/images/project-portfolio.svg",
+    tags: ["Project", "Full-Stack", "Business Intelligence"],
   },
   {
     title: "Flood Monitoring IoT",
