@@ -13,12 +13,6 @@ export const projects: Project[] = [
     tags: ["Product", "Flutter", "Mobile Apps"],
   },
   {
-    title: "FlyHigh Sinergi Indonesia's Website",
-    description: "A company focuses on providing integrated digital solutions and accelerating the modern technology ecosystem in Indonesia..",
-    image: "/images/project-flyhigh.png",
-    tags: ["Startup", "Product", "Website"],
-  },
-  {
     title: "Flexica",
     description: "Flexica is an inclusive web application designed to act as an interactive map and directory for disability-friendly public facilities.",
     image: "/images/project-flexica.png",
