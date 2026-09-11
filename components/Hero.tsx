@@ -40,7 +40,7 @@ export default function Hero() {
         <div className="paper hero-paper">
           <div className="hero-copy">
             <span className="pill-label hero-reveal">
-              FULL-STACK DEVELOPER, WEB AND MOBILE VERSATILE & MORE
+              MULTI-DISCIPLINAY DEVELOPER & MORE
             </span>
 
             <h1 className="hero-reveal">
@@ -52,16 +52,15 @@ export default function Hero() {
               a fresh graduate that just got my degree from UPN "Veteran" Jawa Timur.
             </p>
             <p className="hero-reveal">
-              I&apos;m a <span className="yellow-mark">Computer Science fresh grad</span>{" "}
-              who looks at web development through a creative lens. I don&apos;t
-              just build websites but I also craft digital spaces driven by a
-              desire for innovation and eagerness to make people&apos;s lives easier.
+              I&apos;m a <span className="yellow-mark">Computer Science graduate </span>{" "}
+              specializing in creative Web Development. Experienced in building data-driven systems 
+              with integration across Machine Learning, IoT, Mobile Apps, and robust Database Management.
             </p>
             {/* <p className="hero-reveal">
               Let&apos;s join my journey to build something that matters.
             </p> */}
             <p className="welcome hero-reveal">
-              Below here is my <strong> porto, experience & more</strong>!
+              Below here is my <strong> background, portfolio & more</strong>!
             </p>
 
             <div className="hero-meta hero-reveal">
