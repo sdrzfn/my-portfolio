@@ -18,9 +18,9 @@ export default function ProjectShowcase() {
 
         {/* Header dengan nomor section seperti referensi */}
         <div className="projects-header">
-          <span className="projects-number">
+          {/* <span className="projects-number">
             <Link href="/">← Back To Home</Link>
-          </span>
+          </span> */}
           <h2 className="projects-title">All Projects</h2>
           <p className="projects-subtitle">
             A collection of work spanning web development, IoT, and creative technology.
