@@ -40,7 +40,7 @@ export default function Hero() {
         <div className="paper hero-paper">
           <div className="hero-copy">
             <span className="pill-label hero-reveal">
-              MULTI-DISCIPLINAY & VERSATILE DEVELOPER
+              MULTI-DISCIPLINARY & DEVELOPER
             </span>
 
             <h1 className="hero-reveal">
