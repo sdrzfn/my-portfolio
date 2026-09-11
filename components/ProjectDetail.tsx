@@ -2,7 +2,7 @@
 
 import { projects } from "@/data/projects";
 import Link from "next/link";
-import Image from "next/image";
+import Breadcrumb from "./Breadcrumb";
 
 export default function ProjectDetail({ slug }: { slug: string }) {
   const project = projects.find((p) => p.slug === slug);
@@ -22,13 +22,16 @@ export default function ProjectDetail({ slug }: { slug: string }) {
     );
   }
 
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Projects", href: "/projects" },
+    { label: project.title },
+  ];
+
   return (
     <section className="section project-detail-section">
       <div className="container">
-        {/* Back link */}
-        <Link href="/projects" className="project-back-link">
-          ← Back to Projects
-        </Link>
+        <Breadcrumb items={breadcrumbItems} />
 
         {/* Project header with title and tags */}
         <div className="project-detail-header">

@@ -2,11 +2,21 @@
 
 import { projects } from "@/data/projects";
 import Link from "next/link";
+import Breadcrumb from "./Breadcrumb";
 
 export default function ProjectShowcase() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Projects" },
+  ];
+
   return (
     <section className="section projects-showcase" id="projects">
       <div className="container">
+        {/* Breadcrumb */}
+        <Breadcrumb items={breadcrumbItems} />
+
+        {/* Header dengan nomor section seperti referensi */}
         <div className="projects-header">
           <span className="projects-number">
             <Link href="/">← Back To Home</Link>
