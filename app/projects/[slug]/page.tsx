@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import ProjectDetail from "@/components/ProjectDetail";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+
   const projects = [
     {
       title: "Peduli Pangan",
@@ -74,7 +76,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   ];
 
-  const project = projects.find((p) => p.slug === params.slug);
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     return {
@@ -89,6 +91,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ProjectPage({ params }: Props) {
-  return <ProjectDetail slug={params.slug} />;
+export default async function ProjectPage({ params }: Props) {
+  const { slug } = await params;
+  return <ProjectDetail slug={slug} />;
 }
