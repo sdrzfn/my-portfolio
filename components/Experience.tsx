@@ -16,9 +16,15 @@ const tools: Tool[] = [
   { name: "Docker", image: "/tools/Docker.svg", alt: "Docker" },
 ];
 
-const timeline = [
+const timelineEdu = [
   ["2022–2026", "UPN “Veteran” Jawa Timur", "Bachelor of Information System · Development"],
   ["2018–2021", "SMAN 2 Madiun", "Senior High School · Natural Science Program"],
+];
+
+const timelineExp = [
+  ["FEB 2025-AUG 2026", "CV Flyhigh Sinergi Indonesia", "Chief Technological Officer"],
+  ["FEB 2025-DEC 2025", "Peduli Pangan", "Chief Executive Officer"],
+  ["MAR 2024-JAN 2025", "Peduli Pangan", "Chief Technological Officer"],
 ];
 
 export default function Experience() {
@@ -46,7 +52,7 @@ export default function Experience() {
           <div>
             <h2 className="section-title">LATEST EDUCATION</h2>
             <div className="timeline">
-              {timeline.map(([year, title, detail]) => (
+              {timelineEdu.map(([year, title, detail]) => (
                 <div className="timeline-item" key={year + title}>
                   <span className="timeline-year">{year}</span>
                   <div className="timeline-content">
@@ -58,7 +64,7 @@ export default function Experience() {
             </div>
           </div>
 
-          <div className="contact-panel">
+          {/* <div className="contact-panel">
             <h2 className="section-title">GET IN TOUCH</h2>
             <p>Let&apos;s work together.<br />Below is my socials, just hit me up! :)</p>
             <div className="socials">
@@ -66,6 +72,21 @@ export default function Experience() {
               <a className="social" href="https://linkedin.com/in/sadrakh-zefanya-putra" target="_blank" rel="noreferrer">in</a>
               <a className="social" href="mailto:sadrakhxvid777@gmail.com">✉</a>
               <a className="social" href="">↗</a>
+            </div>
+          </div> */}
+
+          <div className="section-experiences">
+            <h2 className="section-title">LATEST EXPERIENCES</h2>
+            <div className="timeline">
+              {timelineExp.map(([year, title, detail]) => (
+                <div className="timeline-item" key={year + title}>
+                  <span className="timeline-year">{year}</span>
+                  <div className="timeline-content">
+                    <strong>{title}</strong>
+                    <span>{detail}</span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
