@@ -918,7 +918,7 @@ form button:disabled {
 .timeline::before {
   content: "";
   position: absolute;
-  left: 7px;
+  left: 8px;
   top: 7px;
   bottom: 7px;
   width: 1px;
@@ -947,6 +947,8 @@ form button:disabled {
 .timeline-year {
   font-size: .62rem;
   font-weight: 700;
+  margin-right: -30px;
+  margin-top: 2px;
 }
 
 .timeline-content strong {
@@ -958,6 +960,14 @@ form button:disabled {
   display: block;
   font-size: .64rem;
   line-height: 1.55;
+}
+
+.section-experiences {
+  margin-left: -20px;
+}
+
+.section-experiences .timeline-content {
+  margin-left: 40px;
 }
 
 .contact-panel {
