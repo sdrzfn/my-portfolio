@@ -1,3 +1,6 @@
+"use client";
+import { useState } from "react";
+
 type Tool = {
   name: string;
   image: string;
@@ -16,6 +19,9 @@ const tools: Tool[] = [
   { name: "Docker", image: "/tools/Docker.svg", alt: "Docker" },
 ];
 
+const ITEMS_PER_PAGE = 9; // 3x3 grid
+const totalPages = Math.ceil(tools.length / ITEMS_PER_PAGE);
+
 const timelineEdu = [
   ["2022–2026", "UPN “Veteran” Jawa Timur", "Bachelor of Information System · Development"],
   ["2018–2021", "SMAN 2 Madiun", "Senior High School · Natural Science Program"],
@@ -28,24 +34,62 @@ const timelineExp = [
 ];
 
 export default function Experience() {
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const startIndex = currentPage * ITEMS_PER_PAGE;
+  const visibleTools = tools.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  const goToPrev = () => {
+    setCurrentPage((prev) => (prev > 0 ? prev - 1 : totalPages - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentPage((prev) => (prev < totalPages - 1 ? prev + 1 : 0));
+  };
+
   return (
     <section className="section experience-section" id="tools-education">
       <div className="container">
         <div className="experience-grid">
           <div>
-            <h2 className="section-title">TOOLS & EXPERTISE</h2>
-            <div className="tools-grid">
-              {tools.map((tool) => (
-                <div className="tool" key={tool.name}>
-                  <img
-                    src={tool.image}
-                    alt={tool.alt}
-                    className="tool-image"
-                  />
-                  {/* Tooltip label - muncul saat hover */}
-                  <span className="tool-label">{tool.name}</span>
-                </div>
-              ))}
+            <div className="tools-header">
+              <h2 className="section-title">TOOLS & EXPERTISE</h2>
+              <div className="tools-nav">
+                <button
+                  type="button"
+                  className="tools-arrow tools-prev"
+                  onClick={goToPrev}
+                  aria-label="Previous tools"
+                >
+                  ‹
+                </button>
+                <span className="tools-page-indicator">
+                  {currentPage + 1}/{totalPages}
+                </span>
+                <button
+                  type="button"
+                  className="tools-arrow tools-next"
+                  onClick={goToNext}
+                  aria-label="Next tools"
+                >
+                  ›
+                </button>
+              </div>
+            </div>
+
+            <div className="tools-grid-wrapper">
+              <div className="tools-grid">
+                {visibleTools.map((tool) => (
+                  <div className="tool" key={tool.name}>
+                    <img
+                      src={tool.image}
+                      alt={tool.alt}
+                      className="tool-image"
+                    />
+                    <span className="tool-label">{tool.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
