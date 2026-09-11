@@ -40,7 +40,7 @@ export default function Hero() {
         <div className="paper hero-paper">
           <div className="hero-copy">
             <span className="pill-label hero-reveal">
-              PROGRAMMER, CREATIVE THINKER & MORE
+              FULL-STACK DEVELOPER, WEB AND MOBILE VERSATILE & MORE
             </span>
 
             <h1 className="hero-reveal">
@@ -49,19 +49,19 @@ export default function Hero() {
 
             <p className="hero-reveal">
               My full name is <strong>Sadrakh Zefanya Putra</strong> and I am
-              a fresh graduate that just got my degree ;).
+              a fresh graduate that just got my degree from UPN "Veteran" Jawa Timur.
             </p>
             <p className="hero-reveal">
               I&apos;m a <span className="yellow-mark">Computer Science fresh grad</span>{" "}
               who looks at web development through a creative lens. I don&apos;t
               just build websites but I also craft digital spaces driven by a
-              yearning for innovation and a desire to make people&apos;s lives easier.
+              desire for innovation and eagerness to make people&apos;s lives easier.
             </p>
             {/* <p className="hero-reveal">
               Let&apos;s join my journey to build something that matters.
             </p> */}
             <p className="welcome hero-reveal">
-              Welcome to my <strong> website</strong>!!!
+              Below here is my <strong> porto, experience & more</strong>!
             </p>
 
             <div className="hero-meta hero-reveal">
