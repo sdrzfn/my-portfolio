@@ -144,7 +144,7 @@ export const projects: Project[] = [
       "Mobile-responsive website"
     ],
     githubUrl: "https://github.com/sdrzfn/ppid-kabupaten-bondowoso",
-    liveDemoUrl: "ppid-bondowoso.dianahertati.com"
+    liveDemoUrl: "https://ppid-bondowoso.dianahertati.com"
   },
   {
     title: "Route Rush",
