@@ -131,17 +131,17 @@ export const projects: Project[] = [
     title: "PPID Kabupaten Bondowoso",
     slug: "ppid-bondowoso",
     description: "Fully functional and mobile-responsive website as gateway of information and administration for one of the sectors which is PPID in Bondowoso City, East Java.",
-    longDescription: "Developing a web-based mentoring application using PHP and JavaScript requires a robust full-stack architecture designed to streamline the coaching process for college students entering competitive events. As a full-stack developer, your role involves bridging backend logic with responsive frontend interfaces to create a seamless user experience. Below are expanded, professional paragraphs tailored to describe this project and your contributions for a resume, portfolio, or project proposal.",
+    longDescription: "The project involves the end-to-end development of a high-performance, mobile-responsive web portal engineered to digitize the administrative and informational architecture of the PPID (Pejabat Pengelola Informasi dan Dokumentasi) sector for the Bondowoso Regency Government in East Java. Built to strictly comply with public information transparency mandates, the platform serves as a secure, centralized hub where citizens can seamlessly access periodic government records, track public datasets, and receive real-time emergency alerts. By prioritizing accessibility and structural optimization, the application bridges the gap between regional government administration and civic engagement, transforming complex legal archiving into an intuitive, user-friendly digital experience.",
     image: "/images/project-ppid.png",
     tags: ["Project", "Laravel", "Website"],
     role: "Lead Developer",
     techStack: ["PHP", "Laravel", "MySQL", "TailwindCSS"],
     features: [
-      "Sign-in and Register new user",
-      "Learning Module Integration",
-      "Real Competition Timeline",
-      "Payment tie-in programme",
-      "Mobile-responsive website"
+      "Public Information Catalog",
+      "Information Request System",
+      "Objection Filing Portal",
+      "Early Warning System",
+      "Transparency Dashboard"
     ],
     githubUrl: "https://github.com/sdrzfn/ppid-kabupaten-bondowoso",
     liveDemoUrl: "https://ppid-bondowoso.dianahertati.com"
