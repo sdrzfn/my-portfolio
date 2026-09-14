@@ -128,6 +128,25 @@ export const projects: Project[] = [
     liveDemoUrl: ""
   },
   {
+    title: "PPID Kabupaten Bondowoso",
+    slug: "ppid-bondowoso",
+    description: "•	Fully functional and mobile-responsive website as gateway of information and administration for one of the sectors which is PPID in Bondowoso City, East Java.",
+    longDescription: "Developing a web-based mentoring application using PHP and JavaScript requires a robust full-stack architecture designed to streamline the coaching process for college students entering competitive events. As a full-stack developer, your role involves bridging backend logic with responsive frontend interfaces to create a seamless user experience. Below are expanded, professional paragraphs tailored to describe this project and your contributions for a resume, portfolio, or project proposal.",
+    image: "/images/project-ppid.png",
+    tags: ["Project", "Laravel", "Website"],
+    role: "Lead Developer",
+    techStack: ["PHP", "Laravel", "MySQL", "TailwindCSS"],
+    features: [
+      "Sign-in and Register new user",
+      "Learning Module Integration",
+      "Real Competition Timeline",
+      "Payment tie-in programme",
+      "Mobile-responsive website"
+    ],
+    githubUrl: "https://github.com/sdrzfn/ppid-kabupaten-bondowoso",
+    liveDemoUrl: ""
+  },
+  {
     title: "Route Rush",
     slug: "route-rush",
     description: "Route optimization application based on android platform. Using machine learning model of CNN to create prediction and optimize route, Route Rush designed to tackle logistic problem.",
