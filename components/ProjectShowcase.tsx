@@ -23,7 +23,7 @@ export default function ProjectShowcase() {
           </span> */}
           <h2 className="projects-title">All Projects</h2>
           <p className="projects-subtitle">
-            A collection of work spanning web development, IoT, and creative technology.
+            A collection of work spanning web development, mobile apps, IoT, and creative technology.
           </p>
         </div>
 
