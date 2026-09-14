@@ -130,7 +130,7 @@ export const projects: Project[] = [
   {
     title: "PPID Kabupaten Bondowoso",
     slug: "ppid-bondowoso",
-    description: "•	Fully functional and mobile-responsive website as gateway of information and administration for one of the sectors which is PPID in Bondowoso City, East Java.",
+    description: "Fully functional and mobile-responsive website as gateway of information and administration for one of the sectors which is PPID in Bondowoso City, East Java.",
     longDescription: "Developing a web-based mentoring application using PHP and JavaScript requires a robust full-stack architecture designed to streamline the coaching process for college students entering competitive events. As a full-stack developer, your role involves bridging backend logic with responsive frontend interfaces to create a seamless user experience. Below are expanded, professional paragraphs tailored to describe this project and your contributions for a resume, portfolio, or project proposal.",
     image: "/images/project-ppid.png",
     tags: ["Project", "Laravel", "Website"],
@@ -144,7 +144,7 @@ export const projects: Project[] = [
       "Mobile-responsive website"
     ],
     githubUrl: "https://github.com/sdrzfn/ppid-kabupaten-bondowoso",
-    liveDemoUrl: ""
+    liveDemoUrl: "ppid-bondowoso.dianahertati.com"
   },
   {
     title: "Route Rush",
