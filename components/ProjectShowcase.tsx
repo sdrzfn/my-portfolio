@@ -21,7 +21,7 @@ export default function ProjectShowcase() {
           {/* <span className="projects-number">
             <Link href="/">← Back To Home</Link>
           </span> */}
-          <h2 className="projects-title">All Projects</h2>
+          <h1 className="projects-title">All Projects</h1>
           <p className="projects-subtitle">
             A collection of work spanning web development, mobile apps, IoT, and creative technology.
           </p>

@@ -51,10 +51,12 @@ export default function Contact() {
         <div className="contact-paper">
           <div>
             <span className="pill-label-short">LET&apos;S MAKE SOMETHING</span>
-            <a className="contact-cta">
-              Have an idea?<br />
+            <h2 className="contact-cta">
+              Have an idea?
+            </h2>
+            <h2>
               <span className="yellow-mark">Let&apos;s make it real.</span>
-            </a>
+            </h2>
             <p>
               Open to creative collaborations, frontend work, product ideas and
               opportunities where technology meets a little bit of personality.
@@ -74,11 +76,11 @@ export default function Contact() {
               Message
               <textarea required name="message" rows={4} placeholder="tell me what you're building..." disabled={loading} />
             </label>
-            
+
             {error && (
               <p className="form-error">{error}</p>
             )}
-            
+
             <button type="submit" disabled={loading}>
               {loading ? "Sending..." : sent ? "Message noted ✓" : "Send a message →"}
             </button>
