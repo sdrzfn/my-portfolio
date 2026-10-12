@@ -23,7 +23,7 @@ const ITEMS_PER_PAGE = 9; // 3x3 grid
 const totalPages = Math.ceil(tools.length / ITEMS_PER_PAGE);
 
 const timelineEdu = [
-  ["2022–2026", "UPN “Veteran” Jawa Timur", "Bachelor of Information System · Development"],
+  ["2022–2026", "UPN “Veteran” Jawa Timur", "Bachelor of Computer Science · Development"],
   ["2018–2021", "SMAN 2 Madiun", "Senior High School · Natural Science Program"],
 ];
 
