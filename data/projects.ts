@@ -182,6 +182,6 @@ export const projects: Project[] = [
       "Mobile-responsive website"
     ],
     githubUrl: "https://github.com/sdrzfn/cosmic-odyssey",
-    liveDemoUrl: "https://spaceyodyssey.vercel.app"
+    liveDemoUrl: "https://spacesodyssey.sadrakhzp.my.id"
   },
 ];

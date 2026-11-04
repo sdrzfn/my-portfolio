@@ -35,7 +35,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      ...(item.href ? { item: `https://sadrakhzp.vercel.app${item.href}` } : {}),
+      ...(item.href ? { item: `https://sadrakhzp.my.id${item.href}` } : {}),
     })),
   };
 

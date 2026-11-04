@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import LoadingScreen from "@/components/LoadingScreen";
 
-const siteUrl = "https://sadrakhzp.vercel.app";
+const siteUrl = "https://sadrakhzp.my.id";
 const fullName = "Sadrakh Zefanya Putra";
 
 const title = "Sadrakh Zefanya Putra - Programmer, Creative Developer & More";

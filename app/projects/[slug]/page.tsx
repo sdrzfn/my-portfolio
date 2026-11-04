@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 import ProjectDetail from "@/components/ProjectDetail";
 
-const siteUrl = "https://sadrakhzp.vercel.app";
+const siteUrl = "https://sadrakhzp.my.id";
 
 type Props = {
   params: Promise<{ slug: string }>;

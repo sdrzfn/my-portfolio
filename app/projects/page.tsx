@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ProjectsShowcase from "@/components/ProjectShowcase";
 
-const siteUrl = "https://sadrakhzp.vercel.app";
+const siteUrl = "https://sadrakhzp.my.id";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

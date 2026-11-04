@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
 
-const siteUrl = "https://sadrakhzp.vercel.app";
+const siteUrl = "https://sadrakhzp.my.id";
 const now = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
