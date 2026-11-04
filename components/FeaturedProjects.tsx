@@ -1,6 +1,7 @@
 "use client";
 
 import useEmblaCarousel from "embla-carousel-react";
+import Link from "next/link";
 import { projects } from "@/data/projects";
 
 export default function FeaturedProjects() {
@@ -20,27 +21,71 @@ export default function FeaturedProjects() {
           <a className="section-link" href="/projects">view all projects →</a>
         </div>
 
+        {/* Carousel Navigation - dipindahkan ke sini */}
+        <div className="carousel-nav">
+          <button 
+            className="carousel-btn prev" 
+            onClick={scrollPrev} 
+            aria-label="Previous projects"
+            disabled={!emblaApi?.canScrollPrev()}
+          >
+            &lsaquo;
+          </button>
+          <button 
+            className="carousel-btn next" 
+            onClick={scrollNext} 
+            aria-label="Next projects"
+            disabled={!emblaApi?.canScrollNext()}
+          >
+            &rsaquo;
+          </button>
+        </div>
+
         <div className="projects-shell">
-          <button className="carousel-btn prev" onClick={scrollPrev} aria-label="Previous projects">&lsaquo;</button>
           <div className="projects-track" ref={emblaRef}>
             <div className="projects-container">
               {projects.map((project, index) => (
-                <div className="project-slide" key={project.title}>
-                  <article className="project-card">
-                    <div className="project-image">
-                      <img src={project.image} alt="" />
-                    </div>
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                    <div className="tags">
-                      {project.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}
-                    </div>
-                  </article>
+                <div className="project-slide" key={project.slug}>
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className="project-card-link"
+                    aria-label={`Lihat detail project ${project.title}`}
+                    onMouseDown={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      const ripple = document.createElement('span');
+                      ripple.className = 'ripple';
+                      ripple.style.left = `${e.clientX - rect.left}px`;
+                      ripple.style.top = `${e.clientY - rect.top}px`;
+                      e.currentTarget.appendChild(ripple);
+                      setTimeout(() => ripple.remove(), 600);
+                    }}
+                  >
+                    <article className="project-card">
+                      <div className="project-image">
+                        <img
+                          src={project.image}
+                          alt={`${project.title} — project by Sadrakh Zefanya Putra`}
+                        />
+                        <div className="tape photo-tape" />
+                      </div>
+                      <div className="project-details">
+                        <span className="project-idx">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <div className="tags">
+                          {project.tags.map((tag) => (
+                            <span className="tag" key={tag}>{tag}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </article>
+                  </Link>
                 </div>
               ))}
             </div>
           </div>
-          <button className="carousel-btn next" onClick={scrollNext} aria-label="Next projects">&rsaquo;</button>
         </div>
       </div>
     </section>
