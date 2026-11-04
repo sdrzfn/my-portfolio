@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Link from "next/link";
 import { projects } from "@/data/projects";
@@ -9,6 +10,28 @@ export default function FeaturedProjects() {
     align: "start",
     loop: false,
   });
+
+  const [canPrev, setCanPrev] = useState(false);
+  const [canNext, setCanNext] = useState(false);
+
+  const updateButtons = useCallback(() => {
+    if (!emblaApi) return;
+    setCanPrev(emblaApi.canScrollPrev());
+    setCanNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    updateButtons(); // set kondisi awal
+    emblaApi.on("select", updateButtons);
+    emblaApi.on("reInit", updateButtons);
+
+    return () => {
+      emblaApi.off("select", updateButtons);
+      emblaApi.off("reInit", updateButtons);
+    };
+  }, [emblaApi, updateButtons]);
 
   const scrollPrev = () => emblaApi?.scrollPrev();
   const scrollNext = () => emblaApi?.scrollNext();
@@ -23,19 +46,19 @@ export default function FeaturedProjects() {
 
         {/* Carousel Navigation - dipindahkan ke sini */}
         <div className="carousel-nav">
-          <button 
-            className="carousel-btn prev" 
-            onClick={scrollPrev} 
+          <button
+            className="carousel-btn prev"
+            onClick={scrollPrev}
             aria-label="Previous projects"
-            disabled={!emblaApi?.canScrollPrev()}
+            disabled={!canPrev}
           >
             &lsaquo;
           </button>
-          <button 
-            className="carousel-btn next" 
-            onClick={scrollNext} 
+          <button
+            className="carousel-btn next"
+            onClick={scrollNext}
             aria-label="Next projects"
-            disabled={!emblaApi?.canScrollNext()}
+            disabled={!canNext}
           >
             &rsaquo;
           </button>
