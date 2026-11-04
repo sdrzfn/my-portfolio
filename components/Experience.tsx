@@ -28,7 +28,7 @@ const timelineEdu = [
 ];
 
 const timelineExp = [
-  ["FEB 2025-AUG 2026", "CV Flyhigh Sinergi Indonesia", "Chief Technological Officer"],
+  ["FEB 2025-AUG 2026", "CV Flyhigh Sinergi Indonesia", "Web Developer"],
   ["FEB 2025-DEC 2025", "Peduli Pangan", "Chief Executive Officer"],
   ["MAR 2024-JAN 2025", "Peduli Pangan", "Chief Technological Officer"],
 ];
