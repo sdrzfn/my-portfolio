@@ -87,7 +87,7 @@ export const projects: Project[] = [
       "Export reports in multiple formats"
     ],
     githubUrl: "https://github.com/sdrzfn/adventure-works-bi",
-    liveDemoUrl: "https://adventure-works-bi.vercel.app"
+    liveDemoUrl: "https://adventureworks.sadrakhzp.my.id"
   },
   {
     title: "Flood Monitoring IoT",
